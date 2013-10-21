@@ -1,0 +1,24 @@
+{
+  "name": "pdfplease",
+  "version": "0.0.1",
+  "description": "A module to convert markdown into a pdf file.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smebberson/pdfplease.git"
+  },
+  "keywords": [
+    "pdf",
+    "markdown"
+  ],
+  "author": "Scott Mebberson",
+  "license": "BSD",
+  "readmeFilename": "README.md",
+  "dependencies": {
+    "marked": "~0.2.9",
+    "commander": "~2.0.0"
+  }
+}
