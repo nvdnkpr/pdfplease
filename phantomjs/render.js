@@ -52,7 +52,8 @@ page.open(htmlContainerFile, function (status) {
     page.paperSize = {
     
         format: 'A4',
-        orientation: 'portrait'
+        orientation: 'portrait',
+        border: '1.2cm'
     
     };
     
