@@ -22,12 +22,12 @@ if (!program.markdown) {
 }
 
 /* determine the output name and load the markdown content */
-var htmlFile = path.dirname(program.markdown) + '/' + path.basename(program.markdown, path.extname(program.markdown)) + '.html',
+var pdfFile = path.dirname(program.markdown) + '/' + path.basename(program.markdown, path.extname(program.markdown)) + '.pdf',
     markdown = fs.readFileSync(program.markdown, 'utf8'),
     pdfp;
 
 /* let's generate the HTML file! */
-pdfplease.generatePDF(markdown, htmlFile, function (err, result, pdfpref) {
+pdfplease.generatePDF(markdown, pdfFile, function (err, result, pdfpref) {
    
     if (err) {
         console.error(err);
@@ -36,6 +36,6 @@ pdfplease.generatePDF(markdown, htmlFile, function (err, result, pdfpref) {
     
     pdfp = pdfpref;
     
-    console.log('The file was successfully saved (%s)', result);
+    console.log('The PDF was successfully created (%s)', result);
     
 });

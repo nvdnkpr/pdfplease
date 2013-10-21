@@ -19,6 +19,7 @@
   "readmeFilename": "README.md",
   "dependencies": {
     "marked": "~0.2.9",
-    "commander": "~2.0.0"
+    "commander": "~2.0.0",
+    "tmp": "0.0.21"
   }
 }
