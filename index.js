@@ -13,7 +13,7 @@ var program = require('commander'),
 
 /* work out command line options */
 program
-    .version('0.0.1')
+    .version('0.0.5')
     .option('-m --markdown [file]', 'Markdown file')
     .parse(process.argv);
 
