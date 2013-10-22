@@ -1,6 +1,6 @@
 {
   "name": "pdfplease",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A module to convert a markdown file into a pdf file.",
   "bin": { 
       "pdfplease": "index.js"
