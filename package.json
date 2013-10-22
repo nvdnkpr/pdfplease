@@ -1,15 +1,18 @@
 {
   "name": "pdfplease",
   "version": "0.0.3",
-  "description": "A module to convert markdown into a pdf file.",
-  "bin": { "pdfplease": "index.js"},
+  "description": "A module to convert a markdown file into a pdf file.",
+  "bin": { 
+      "pdfplease": "index.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/smebberson/pdfplease.git"
   },
   "keywords": [
     "pdf",
-    "markdown"
+    "markdown",
+    "phantonjs"
   ],
   "author": "Scott Mebberson",
   "license": "BSD",

@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 /* jshint strict: true, node: true */
 
 "use strict";
@@ -14,6 +16,11 @@ program
     .version('0.0.1')
     .option('-m --markdown [file]', 'Markdown file')
     .parse(process.argv);
+
+/* also allow a default argument to be passed, being the MD file */
+if(!program.markdown && process.argv.length) {
+    program.markdown = path.relative('./', program.args[0]);
+}
 
 /* ensures we have a markdown file */
 if (!program.markdown) {
