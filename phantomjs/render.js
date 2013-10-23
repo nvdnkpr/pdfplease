@@ -39,12 +39,11 @@ page.open(htmlContainerFile, function (status) {
     // load in the content HTML
     page.evaluate(function (html) {
         
-        var body = document.querySelector('body');
+        var content = document.querySelector('#content');
         var divEl = document.createElement('div');
         
-        body.innerHTML = html;
-        
-        body.appendChild(divEl);
+        divEl.innerHTML = html;
+        content.appendChild(divEl);
         
     }, fs.read(htmlContentFile));
     
