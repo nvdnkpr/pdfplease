@@ -2,8 +2,8 @@
   "name": "pdfplease",
   "version": "0.0.5",
   "description": "A module to convert a markdown file into a pdf file.",
-  "bin": { 
-      "pdfplease": "index.js"
+  "bin": {
+    "pdfplease": "index.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "dependencies": {
     "marked": "~0.2.9",
     "commander": "~2.0.0",
-    "tmp": "0.0.21"
+    "tmp": "0.0.21",
+    "colors": "~0.6.2"
   }
 }

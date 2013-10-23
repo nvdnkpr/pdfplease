@@ -9,6 +9,7 @@ var program = require('commander'),
     path = require('path'),
     marked = require('marked'),
     fs = require('fs'),
+    colors = require('colors'),
     pdfplease = require('./lib/pdfplease.js'),
     packageJSON = require('./package.json');
 
@@ -25,7 +26,7 @@ if(!program.markdown && process.argv.length) {
 
 /* ensures we have a markdown file */
 if (!program.markdown) {
-    console.error('Please supply a markdown file.');
+    console.error('Please supply a markdown file.'.red);
     process.exit(0);
 }
 
@@ -44,6 +45,6 @@ pdfplease.generatePDF(markdown, pdfFile, function (err, result, pdfpref) {
     
     pdfp = pdfpref;
     
-    console.log('The PDF was successfully created (%s)', result);
+    console.log('The PDF was successfully created (%s).'.green, result);
     
 });
