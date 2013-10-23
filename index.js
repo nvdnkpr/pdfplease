@@ -9,11 +9,12 @@ var program = require('commander'),
     path = require('path'),
     marked = require('marked'),
     fs = require('fs'),
-    pdfplease = require('./lib/pdfplease.js');
+    pdfplease = require('./lib/pdfplease.js'),
+    packageJSON = require('./package.json');
 
 /* work out command line options */
 program
-    .version('0.0.5')
+    .version(packageJSON.version)
     .option('-m --markdown [file]', 'Markdown file')
     .parse(process.argv);
 
