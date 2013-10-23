@@ -18,6 +18,7 @@ program
     .version(packageJSON.version)
     .option('-m --markdown [file]', 'Markdown file', path.resolve)
     .option('-c --css [file]', 'CSS file', path.resolve)
+    .option('-h --html [file]', 'HTML container file', path.resolve)
     .parse(process.argv);
 
 /* also allow a default argument to be passed, being the MD file */
@@ -43,6 +44,7 @@ var pdfpleaseOptions = {
 };
 
 if (program.css) pdfpleaseOptions.css = program.css;
+if (program.html) pdfpleaseOptions.htmlContainer = program.html;
 
 pdfplease.generatePDF(markdown, pdfpleaseOptions, function (err, result, pdfpref) {
    
