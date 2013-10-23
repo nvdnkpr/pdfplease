@@ -13,6 +13,10 @@ It's that easy!
     
 You need to install it globally, because it's a command line interface, not something you can require in your code (not yet anyway).
 
+### Important
+
+[phantomjs](http://phantomjs.org/) is a requirement for pdfplease, so you have to have that installed prior and on your PATH so that pdfplease has access to the [phantomjs binary](http://phantomjs.org/download.html).
+
 ## Usage
 
 Simple:
