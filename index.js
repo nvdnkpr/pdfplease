@@ -16,7 +16,8 @@ var program = require('commander'),
 /* work out command line options */
 program
     .version(packageJSON.version)
-    .option('-m --markdown [file]', 'Markdown file')
+    .option('-m --markdown [file]', 'Markdown file', path.resolve)
+    .option('-c --css [file]', 'CSS file', path.resolve)
     .parse(process.argv);
 
 /* also allow a default argument to be passed, being the MD file */
@@ -36,7 +37,14 @@ var pdfFile = path.dirname(program.markdown) + '/' + path.basename(program.markd
     pdfp;
 
 /* let's generate the HTML file! */
-pdfplease.generatePDF(markdown, pdfFile, function (err, result, pdfpref) {
+
+var pdfpleaseOptions = {
+    resultFile: pdfFile
+};
+
+if (program.css) pdfpleaseOptions.css = program.css;
+
+pdfplease.generatePDF(markdown, pdfpleaseOptions, function (err, result, pdfpref) {
    
     if (err) {
         console.error(err);
